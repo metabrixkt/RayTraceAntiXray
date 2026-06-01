@@ -1,15 +1,12 @@
 package com.vanillage.raytraceantixray.commands;
 
+import com.vanillage.raytraceantixray.RayTraceAntiXray;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
-
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
-
-import com.vanillage.raytraceantixray.RayTraceAntiXray;
 
 public final class RayTraceAntiXrayTabExecutor implements TabExecutor {
     private final RayTraceAntiXray plugin;
@@ -66,7 +63,7 @@ public final class RayTraceAntiXrayTabExecutor implements TabExecutor {
                                 return true;
                             }
                         } else {
-                            sender.sendMessage(ChatColor.RED + "You don't have permissions.");
+                            sender.sendRichMessage("<red>You don't have permissions.");
                             return true;
                         }
                     } else if (args[1].toLowerCase(Locale.ROOT).equals("off")) {
@@ -77,12 +74,12 @@ public final class RayTraceAntiXrayTabExecutor implements TabExecutor {
                                 return true;
                             }
                         } else {
-                            sender.sendMessage(ChatColor.RED + "You don't have permissions.");
+                            sender.sendRichMessage("<red>You don't have permissions.");
                             return true;
                         }
                     }
                 } else {
-                    sender.sendMessage(ChatColor.RED + "You don't have permissions.");
+                    sender.sendRichMessage("<red>You don't have permissions.");
                     return true;
                 }
             }
